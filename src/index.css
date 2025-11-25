@@ -1,0 +1,17 @@
+.card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    border: solid 4px rgb(28, 107, 138);
+}
+.card{
+  font-family: 'Trebuchet MS';
+    border-radius: 30px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #6198e0;
+    color: antiquewhite;
+    max-width: 200px;
+}
