@@ -21,5 +21,4 @@ Dan agar saya bisa mengerti konsep dasar React + Vite serta bisa membuat project
 - Node.js
 
 ##  Proses Belajar:
-* Mempelajari cara install dan setup React + Vite, mempelajari struktur folder pada project React + Vite, 
-membuat card sederhana dan juga menggunakan propTypes pada komponen card : <strong> 2 Jam 15 menit, Tanggal 12/11/2025</strong>
+* Setup react dengan vite + bikin card film sederhana . timestamp 12/11/2025

@@ -2,11 +2,12 @@ import Card from './card/Card.jsx';
 import Button from './button/Button.jsx';
 import CardFilm from './Card Film/cardFilm.jsx';
 import styles from './Card Film/cardFilm.module.css';
+import DropdownMenu from './Navigation Bar/dropdownMenu.jsx';
+
 function App() {
     return (
       <>
-      <Card />  <Card />
-      <Button />
+      <DropdownMenu />
       <div className={styles.cardFilmContainer}>
         <CardFilm 
           gambar="https://image.tmdb.org/t/p/original/hD4UoR4ZUXYBoKhKRwrJiTFLqCo.jpg"

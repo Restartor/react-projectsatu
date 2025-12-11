@@ -1,0 +1,86 @@
+.dropdownMenuContainer { /* penjelasan: gaya untuk kontainer dropdown menu */
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ff7b00 0%, #ff9933 100%);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    max-width: auto;
+    margin: 16px 10px;
+    font-family: Arial, sans-serif;
+}
+
+.dropdownMenuContainer label { /* penjelasan: gaya untuk label dalam dropdown menu */
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    padding: 5px;
+}
+
+.dropdownMenuSelect { /* penjelasan: gaya untuk elemen select dalam dropdown menu */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 36px 10px 12px;
+    border-radius: 10px;
+    border: 2px solid #ff7b00;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    outline: none;
+    transition: box-shadow 0.2s ease, transform 0.15s ease, border-color 0.2s ease; /* penjelasan: transisi halus untuk efek interaktif */
+    cursor: pointer;
+}
+
+.dropdownMenuSelect:hover { /* penjelasan: gaya saat hover pada elemen select */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+.dropdownMenuSelect:focus { /* penjelasan: gaya saat elemen select dalam fokus */
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.35);
+    cursor: pointer;
+}
+
+.dropdownMenuContainer option { /* penjelasan: gaya untuk opsi dalam dropdown menu */
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Optional: small arrow indicator for select */
+.dropdownMenuWrapper { /* penjelasan: membungkus select untuk menambahkan panah */
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dropdownMenuWrapper::after { /* penjelasan: menambahkan panah kecil di sebelah kanan dropdown */
+    content: "\25BE"; /* Down triangle */
+    position: absolute;
+    right: 12px;
+    color: #888;
+    pointer-events: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) { /* penjelasan: gaya responsif untuk layar kecil */
+    .dropdownMenuContainer {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px;
+    }
+    .dropdownMenuSelect {
+        width: 100%;
+    }
+}
+
