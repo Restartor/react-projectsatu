@@ -5,4 +5,17 @@ Dimulai serius mulai dari tanggal 12/10/2025
 
 Saya sebagai mahasiswa semester satu 
 
-## Tujuan Akhir: Membuat website film / baca komik
+## Tujuan Akhir: 
+
+Membuat Website Film / Komik dengan React + Vite (non resmi)
+Dan agar saya bisa mengerti konsep dasar React + Vite serta bisa membuat project sederhana menggunakan React + Vite
+
+## Teknologi yang digunakan:
+- React Library
+- Vite
+- JavaScript
+- HTML
+- CSS
+- Git dan github
+- Visual Studio Code
+- Node.js
