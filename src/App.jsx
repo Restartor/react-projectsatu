@@ -1,15 +1,33 @@
-import Card from './card/Card.jsx';
-import Button from './button/Button.jsx';
-import CardFilm from './Card Film/cardFilm.jsx';
-import styles from './Card Film/cardFilm.module.css';
-import DropdownMenu from './Navigation Bar/dropdownMenu.jsx';
+import Card from './1.Card Components/Card.jsx';
+import Button from './2.Diffferent CSS Styles/Button.jsx';
+import CardFilm from './3.Props (CardFilm)/cardFilm.jsx';
+import styles from './3.Props (CardFilm)/cardFilm.module.css';
+import DropdownMenu from './Navigation Bar(iseng)/dropdownMenu.jsx';
 import React from 'react';
 import PropTypes from 'prop-types';
-import UserGreeting from './User Greeting/UserGreeting.jsx';
+import UserGreeting from './4.Conditional Rendering/UserGreeting.jsx';
+import List from './5.Rendering List/List.jsx';
 
 function App() {
+
+const films = [{id: 1,name: "Tulsa King", year: 2025},
+                {id: 2, name: "John Wick 4", year: 2023}, 
+                {id: 3, name: "Black Panther: Wakanda Forever", year: 2022}, 
+                {id: 4, name: "Avengers: Endgame", year: 2019}];
+
+const filmterbaru = [{id: 5, name: "Avatar: The Way of Water", year: 2022},
+                    {id: 6,  name: "Doctor Strange in the Multiverse of Madness", year: 2022},
+                    {id: 7, name: "Spider-Man: No Way Home", year: 2021},
+                    {id: 8, name: "Dune", year: 2021}];
+
+// penjelasan: kita bisa mengirimkan data array films sebagai props 
+// ke komponen List dengan menambahkan atribut bioskop pada elemen 
+// <List /> dan  memberikan nilai films pada atribut tersebut.
+
+
     return (
       <>
+      {/**/}
       <DropdownMenu />
       <UserGreeting isLoggedIn={false} name="Asep"/>
       <div className={styles.cardFilmContainer}>
@@ -26,10 +44,10 @@ function App() {
           deskripsi="John Wick kembali beraksi melawan musuh-musuh lamanya dalam pertempuran epik yang menegangkan."
         />
         <CardFilm 
-          gambar="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Y43POKjjKDGI9MH89NW0NAzzp8.jpg"
           judul="Black Panther: Wakanda Forever"
           tahun="2022"
           deskripsi="Setelah kematian Raja T'Challa, Wakanda menghadapi ancaman baru dari musuh-musuh lama dan baru."
+          gambar="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sv1xJUazXeYqALzczSZ3O6nkH75.jpg"
         />
         <CardFilm
           judul="Avengers: Endgame"
@@ -37,8 +55,16 @@ function App() {
           deskripsi="Para pahlawan super bersatu untuk mengalahkan Thanos dan mengembalikan keseimbangan alam semesta."
           gambar="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/or06FN3Dka5tukK1e9sl16pB3iy.jpg"
         />
+        <CardFilm
+        judul="Doctor Strange in the Multiverse of Madness"
+        tahun="2022"
+        deskripsi="Doctor Strange menjelajahi multiverse yang berbahaya untuk melindungi realitas dari ancaman baru."
+        gambar="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg"
+        />
       </div>
 
+      {films.length > 0 && <List bioskop={films} category="Film Terkenal"/>}
+      {filmterbaru.length > 0 && <List bioskop={filmterbaru} category="Film terbaru"/>}
       </>
     );
 }

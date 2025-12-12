@@ -1,4 +1,5 @@
-import Card from '../card/Card';
+import Card from './../1.Card Components/Card.jsx';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './cardFilm.module.css';
 
