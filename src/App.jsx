@@ -11,7 +11,7 @@ function App() {
     return (
       <>
       <DropdownMenu />
-      <UserGreeting isLoggedIn={true} name="Asep"/>
+      <UserGreeting isLoggedIn={false} name="Asep"/>
       <div className={styles.cardFilmContainer}>
         <CardFilm 
           gambar="https://image.tmdb.org/t/p/original/hD4UoR4ZUXYBoKhKRwrJiTFLqCo.jpg"
