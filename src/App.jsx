@@ -3,11 +3,15 @@ import Button from './button/Button.jsx';
 import CardFilm from './Card Film/cardFilm.jsx';
 import styles from './Card Film/cardFilm.module.css';
 import DropdownMenu from './Navigation Bar/dropdownMenu.jsx';
+import React from 'react';
+import PropTypes from 'prop-types';
+import UserGreeting from './User Greeting/UserGreeting.jsx';
 
 function App() {
     return (
       <>
       <DropdownMenu />
+      <UserGreeting isLoggedIn={true} name="Asep"/>
       <div className={styles.cardFilmContainer}>
         <CardFilm 
           gambar="https://image.tmdb.org/t/p/original/hD4UoR4ZUXYBoKhKRwrJiTFLqCo.jpg"

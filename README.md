@@ -22,3 +22,5 @@ Dan agar saya bisa mengerti konsep dasar React + Vite serta bisa membuat project
 
 ##  Proses Belajar:
 * Setup react dengan vite + bikin card film sederhana . timestamp 12/11/2025
+
+* Membuat Navigation Bar dengan dropdown menu dan conditional rendering . timestamp 13/11/2025

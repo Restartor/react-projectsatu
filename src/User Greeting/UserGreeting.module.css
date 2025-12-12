@@ -1,0 +1,30 @@
+.welcome {
+    font-size: 24px;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background: linear-gradient(90deg, #ff7b00 0%, #ff9933 100%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.welcome h2 {
+    margin: 0;
+    padding: 0;
+    /* make a black gradient for the h2 background */
+    background: linear-gradient(90deg, #000000 0%, #333333 100%);
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+
+}
+
+.loginPrompt {
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #ff0000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
