@@ -46,7 +46,8 @@ Dan agar saya bisa mengerti konsep dasar React + Vite serta bisa membuat project
     22. Fetching data from API
 
 ##  Proses Belajar:
-* Setup react dengan vite + bikin card film sederhana . timestamp 12/11/2025
+* Setup react dengan vite + bikin card film sederhana . timestamp 12/11/2025 (pada folder 1.Card Component dan 3.Props(CardFilm) )
 
-* Membuat Navigation Bar dengan dropdown menu dan conditional rendering . timestamp 12/12/2025
+* Membuat Navigation Bar dengan dropdown menu dan conditional rendering . timestamp 12/12/2025 (pada folder 5.Rendering Lists dan Navigation bar)
 
+* Membuat Click events sederhana pada Card Film . timestamp 12/13/2025 (pada folder 6.Click Events)
