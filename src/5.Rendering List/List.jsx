@@ -1,7 +1,8 @@
 
 import styles from './List.module.css';
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { use } from 'react';
+import PropTypes, { func } from 'prop-types';
+
 
 function List(props) {
 
@@ -24,9 +25,17 @@ function List(props) {
 
 
 
-    const listFilms = filmsList.map(bioskop => 
-            <li key={bioskop.id} >{bioskop.name}: &nbsp;
-            <b style={{color: "red"}}>{bioskop.year}</b></li>) 
+    const pencetNontonLinkFilm = (link) => {
+        if (link) {
+            window.open(link, "_blank");
+        } else {
+            alert("Maaf, link film tidak tersedia.");
+        }
+    }
+
+    const listFilms = filmsList.map(bioskop=> 
+            <li onClick={() => pencetNontonLinkFilm(bioskop.linkfilms)} key={bioskop.id} >{bioskop.name}: &nbsp;<b style={{color: "red"}}>{bioskop.year}</b>
+            </li>) 
     // penjelasan: fungsi map() digunakan untuk mengiterasi 
     // setiap elemen dalam array films dan mengembalikan elemen JSX 
     // <li> yang berisi nama film tersebut. Hasil dari map() adalah 
@@ -49,9 +58,14 @@ function List(props) {
 
 List.propTypes = {
     category: PropTypes.string,
-    bioskop: PropTypes.arrayOf(PropTypes.shape({id: PropTypes.number, 
-                                name: PropTypes.string, 
-                                year: PropTypes.number})),
+    bioskop: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number,
+            name: PropTypes.string,
+            year: PropTypes.number,
+            linkfilm: PropTypes.string,
+        })
+    ),
                             }
 
 

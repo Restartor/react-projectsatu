@@ -9,15 +9,15 @@ import UserGreeting from './4.Conditional Rendering/UserGreeting.jsx';
 import List from './5.Rendering List/List.jsx';
 
 function App() {
-
-const films = [{id: 1,name: "Tulsa King", year: 2025},
-                {id: 2, name: "John Wick 4", year: 2023}, 
-                {id: 3, name: "Black Panther: Wakanda Forever", year: 2022}, 
-                {id: 4, name: "Avengers: Endgame", year: 2019}];
+// berikan link film pada setiap objek di array films
+const films = [{id: 1,name: "Tulsa King", year: 2025, linkfilms: "https://www.youtube.com/watch?v=aaQSScwZPbA"},
+                {id: 2, name: "John Wick 4", year: 2023, linkfilms: "https://www.youtube.com/watch?v=qEVUtrk8_B4"}, 
+                {id: 3, name: "Black Panther: Wakanda Forever", year: 2022, linkfilms: "https://www.youtube.com/watch?v=_Z3QKkl1WyM"}, 
+                {id: 4, name: "Avengers: Endgame", year: 2019, linkfilms: "https://www.youtube.com/watch?v=TcMBFSGVi1c"}];
 
 const filmterbaru = [{id: 5, name: "Avatar: The Way of Water", year: 2022},
                     {id: 6,  name: "Doctor Strange in the Multiverse of Madness", year: 2022},
-                    {id: 7, name: "Spider-Man: No Way Home", year: 2021},
+                    {id: 7, name: "Spider-Man: No Way Home", year: 2021,},
                     {id: 8, name: "Dune", year: 2021}];
 
 // penjelasan: kita bisa mengirimkan data array films sebagai props 
@@ -32,17 +32,17 @@ const filmterbaru = [{id: 5, name: "Avatar: The Way of Water", year: 2022},
       <UserGreeting isLoggedIn={false} name="Asep"/>
       <div className={styles.cardFilmContainer}>
         <CardFilm 
-          gambar="https://image.tmdb.org/t/p/original/hD4UoR4ZUXYBoKhKRwrJiTFLqCo.jpg"
           judul="Tulsa King"
+          gambar="https://image.tmdb.org/t/p/original/hD4UoR4ZUXYBoKhKRwrJiTFLqCo.jpg"
           tahun="2025"
           deskripsi="Tulsa king menceritakan tentang mantan komando mafia yang pensiun dan membuat kerajaan mafia baru"
           videoLink="https://www.youtube.com/watch?v=aaQSScwZPbA"
         />
         <CardFilm 
-          gambar="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6vcDalR50RWa309vBH1NLmG2rjQ.jpg"
           judul="John Wick 4"
           tahun="2023"
           deskripsi="John Wick kembali beraksi melawan musuh-musuh lamanya dalam pertempuran epik yang menegangkan."
+          gambar="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg"
           videoLink="https://www.youtube.com/watch?v=qEVUtrk8_B4"
         />
         <CardFilm 
