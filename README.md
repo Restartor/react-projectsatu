@@ -51,3 +51,5 @@ Dan agar saya bisa mengerti konsep dasar React + Vite serta bisa membuat project
 * Membuat Navigation Bar dengan dropdown menu dan conditional rendering . timestamp 12/12/2025 (pada folder 5.Rendering Lists dan Navigation bar)
 
 * Membuat Click events sederhana pada Card Film . timestamp 12/13/2025 (pada folder 6.Click Events)
+
+* mempelajari click events lebih dalam dengan menjadikan list film menjadi clickable list yang mengarah ke link nonton film . timestamp 12/14/2025 (pada folder 5.Rendering Lists)
