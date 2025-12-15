@@ -53,3 +53,5 @@ Dan agar saya bisa mengerti konsep dasar React + Vite serta bisa membuat project
 * Membuat Click events sederhana pada Card Film . timestamp 12/13/2025 (pada folder 6.Click Events)
 
 * mempelajari click events lebih dalam dengan menjadikan list film menjadi clickable list yang mengarah ke link nonton film . timestamp 12/14/2025 (pada folder 5.Rendering Lists)
+
+* hari senin: menambahkan banyak fitur, Mempelajari React-Router-Dom untuk membuat multi page pada website film sederhana saya. Serta menambahkan Navigation bar berguna navigasi antar halaman genre. Kesimpulan: Menyempurnakan Navigation bar, menambahkan multipage, Menambahkan Halaman WebPage, Membuat Halaman Error 404, dan juga membuat file yang mengkordinasi pages genre yang dipilih pada Navigation bar. timestamp 12/15/2025
