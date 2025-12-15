@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {useLocation, Link} from "react-router-dom";
 import styles from './dropdownMenu.module.css';
+import webicon from '../ASSET NEGARA/webicon.png'
 
 const routeTitle = (path) => {
   if (path === "/") return "Home";
@@ -18,6 +19,8 @@ const routeTitle = (path) => {
 
 function DropdownMenu() {
 
+
+
 const location = useLocation();
 const title = routeTitle(location.pathname);
 
@@ -32,8 +35,8 @@ const actionGenre = () => {
     // saat di klik akan mengarah ke halaman baru yang menampilkan daftar film berdasarkan pilihan tsb
     <nav className={styles.navbar}>
       <ul className={styles.navItems}>
-        <img src="webicon.png" alt="Website Icon" className={styles.logonavbar}onClick={() => {window.location.href = '/';}} />
-        <h2 className={styles.navTitle}>{title}</h2>
+        <img src={webicon} alt="Website Icon" className={styles.logonavbar}onClick={() => {window.location.href = '/';}} />
+        <h2 className={styles.navTitle} onClick={() => {window.location.href = '/';}  }>{title}</h2>
         <li className={styles.navItem}>
           Genre
           <ul className={styles.dropdownMenu}>
