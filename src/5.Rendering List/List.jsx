@@ -40,6 +40,8 @@ function List(props) {
     // setiap elemen dalam array films dan mengembalikan elemen JSX 
     // <li> yang berisi nama film tersebut. Hasil dari map() adalah 
     // array baru yang berisi elemen-elemen JSX tersebut.
+    // artinya dalam bahasa manusia: untuk setiap objek film dalam array films,
+    // buatlah elemen list item <li> yang menampilkan nama film tersebut.
 
     
 
