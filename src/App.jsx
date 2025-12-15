@@ -1,10 +1,7 @@
-import Card from './1.Card Components/Card.jsx';
-import Button from './2.Diffferent CSS Styles/Button.jsx';
+
 import CardFilm from './3.Props (CardFilm)/cardFilm.jsx';
-import styles from './3.Props (CardFilm)/cardFilm.module.css';
+import styles from './ASSET NEGARA/App.module.css';
 import DropdownMenu from './Navigation Bar(iseng)/dropdownMenu.jsx';
-import React from 'react';
-import PropTypes from 'prop-types';
 import UserGreeting from './4.Conditional Rendering/UserGreeting.jsx';
 import List from './5.Rendering List/List.jsx';
 
@@ -30,7 +27,9 @@ const filmterbaru = [{id: 5, name: "Avatar: The Way of Water", year: 2022},
   
       <DropdownMenu />
           {/**/}
-      <UserGreeting isLoggedIn={false} name="Asep"/>
+      <UserGreeting isLoggedIn={true} name="Asep"/>
+      <div className={styles.WelcomeWoy}>Happy Watching!!😎</div>
+
       <div className={styles.cardFilmContainer}>
         <CardFilm 
           judul="Tulsa King"
@@ -73,10 +72,20 @@ const filmterbaru = [{id: 5, name: "Avatar: The Way of Water", year: 2022},
         videoLink="https://www.youtube.com/watch?v=aWzlQ2N6qqg"
         genre={["Action ", "Adventure ", "Fantasy "]}
         />
+        <CardFilm 
+        judul="Spiderman: No Way Home"
+        tahun="2021"
+        deskripsi="Peter Parker menghadapi konsekuensi dari identitasnya yang terungkap dan berhadapan dengan musuh-musuh dari dimensi lain."
+        gambar="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+        videoLink="https://www.youtube.com/watch?v=JfVOs4VSpmA"
+        genre={["Action ", "Adventure ", "Sci-Fi "]}
+        />
+        <span>      
+          {films.length > 0 && <List bioskop={films} category="Film Terkenal"/>}
+           {filmterbaru.length > 0 && <List bioskop={filmterbaru} category="Film terbaru"/>}
+        </span>
       </div>
 
-      {films.length > 0 && <List bioskop={films} category="Film Terkenal"/>}
-      {filmterbaru.length > 0 && <List bioskop={filmterbaru} category="Film terbaru"/>}
 
       </>
     );

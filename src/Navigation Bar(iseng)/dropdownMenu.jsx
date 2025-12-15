@@ -13,20 +13,20 @@ const routeTitle = (path) => {
   if (path.startsWith("/films/genre/adventure")) return "Adventure";
   if (path.startsWith("/films/genre/thriller")) return "Thriller";
   if (path.startsWith("/films/genre/animation")) return "Animation";
+  if (path.startsWith("/films/movies/most-watched")) return "Most Watched";
+  if (path.startsWith("/films/movies/top-rated")) return "Top Rated Movies";
+  if (path.startsWith("/films/movies/trending")) return "Trending Movies";
+
+
   return "Page";
 };
 
 
 function DropdownMenu() {
 
-
-
 const location = useLocation();
 const title = routeTitle(location.pathname);
 
-const actionGenre = () => {
-  window.location.href = '/films/genre/action';
-}
 
   return (
     // buatlah dropdown menu jika di hover bagian genre maka akan muncul pilihan genre film seperti Action, Comedy, Horror, Romance, Fiction, Adventure, Thriller, Animation 
@@ -53,9 +53,9 @@ const actionGenre = () => {
         <li className={styles.navItem}> 
           Movies
           <ul className={styles.dropdownMenu}>
-            <li className={styles.dropdownItem}><Link to="/films/movies/most-popular">Most Popular</ Link></li>
-            <li className={styles.dropdownItem}><Link to="/films/movies/upcoming">Upcoming</Link></li>
+            <li className={styles.dropdownItem}><Link to="/films/movies/most-watched">Most Watched</Link></li>
             <li className={styles.dropdownItem}><Link to="/films/movies/top-rated">Top Rated</Link></li>
+            <li className={styles.dropdownItem}><Link to="/films/movies/trending">Trending</Link></li> 
           </ul>
         </li>
       </ul>

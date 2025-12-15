@@ -1,3 +1,4 @@
+import React from 'react';
 
 function ErrNotFound() {
 
@@ -12,7 +13,7 @@ function ErrNotFound() {
         marginTop: '2vh',
         fontFamily: 'Arial, sans-serif',
         color: '#ff0000',
-    }
+    };
 const buttonStyle = {
     padding: '10px 20px',
     fontSize: '16px',

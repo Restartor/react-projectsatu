@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import React from 'react'
 import Error404 from './WebPage/ErrNotFound.jsx'
 import GenrePage from './WebPage/genreFilms/GenrePage.jsx'
-
+import MoviesPage from './WebPage/Movies/MoviesPage.jsx'
 
 // make a path for each genre film page if clicked then goes to the
 // genreFilms folder and open the genre film page based on the genre clicked
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/films/movies/:movies",
-    element: <Error404 />
+    element: <MoviesPage />
   },
   {
     path: "*", 

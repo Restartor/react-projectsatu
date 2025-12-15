@@ -6,6 +6,17 @@ body {
   min-height: 100vh;
 }
 
+.cardFilmContainer{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 50px 20px;
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+}
+
 #root {
   min-height: 100vh;
 }
