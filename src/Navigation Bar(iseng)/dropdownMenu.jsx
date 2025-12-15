@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from './dropdownMenu.module.css';
 
 function DropdownMenu() {
+
+
+
+
   return (
     <div className={styles.dropdownMenuContainer}>
       <label htmlFor="genre">Pilih Genre Film:</label>
@@ -33,3 +37,6 @@ function DropdownMenu() {
 }
 
 export default DropdownMenu;
+
+// useState digunakan untuk menyimpan nilai genre dan tahun yang dipilih 
+// oleh pengguna dari dropdown menu.
