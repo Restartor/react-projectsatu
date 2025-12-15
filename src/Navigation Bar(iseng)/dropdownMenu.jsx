@@ -21,9 +21,6 @@ function DropdownMenu() {
 const location = useLocation();
 const title = routeTitle(location.pathname);
 
-const actionGenre = () => {
-  window.location.href = '/films/genre/action';
-}
 
   return (
     // buatlah dropdown menu jika di hover bagian genre maka akan muncul pilihan genre film seperti Action, Comedy, Horror, Romance, Fiction, Adventure, Thriller, Animation 
