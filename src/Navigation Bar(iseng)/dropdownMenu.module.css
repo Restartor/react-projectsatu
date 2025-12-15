@@ -1,85 +1,114 @@
-.dropdownMenuContainer { /* penjelasan: gaya untuk kontainer dropdown menu */
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 16px;
-    background: linear-gradient(135deg, #ff7b00 0%, #ff9933 100%);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    max-width: auto;
-    font-family: Arial, sans-serif;
-    margin: 0 0 10px 0;
+/* .navbar adalah kotak navigasi utama yang menampung bagian lain*/
+.navbar { 
+  background: linear-gradient(135deg, #ff7b00 0%, #ff9933 100%);
+  padding: 15px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  margin: 20px 10px;
+}
+/*
+.navItems adalah kotak yang menampung daftar ul navigasi
+*/
+.navItems {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+/*
+Navitem adalah produk yang terdapat didalam navItems
+*/
+.navItem {
+  position: relative;
+  padding: 12px 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
 }
 
-.dropdownMenuContainer label { /* penjelasan: gaya untuk label dalam dropdown menu */
-    color: #fff;
-    font-weight: 700;
-    letter-spacing: 0.2px;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
-    padding: 5px;
+/*
+efek jika cursor menyorot navItem 
+*/
+.navItem:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
-.dropdownMenuSelect { /* penjelasan: gaya untuk elemen select dalam dropdown menu */
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    padding: 10px 36px 10px 12px;
-    border-radius: 10px;
-    border: 2px solid #ff7b00;
-    background-color: #fff;
-    color: #333;
-    font-size: 14px;
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    outline: none;
-    transition: box-shadow 0.2s ease, transform 0.15s ease, border-color 0.2s ease; /* penjelasan: transisi halus untuk efek interaktif */
-    cursor: pointer;
+/*.dropdownMenu adalah kotak menu yang menampung isian dari isian menu */
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  min-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.dropdownMenuSelect:hover { /* penjelasan: gaya saat hover pada elemen select */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-    transform: translateY(-1px);
-    cursor: pointer;
+.navItem:hover .dropdownMenu,
+.dropdownMenu:hover {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+/*  
+dropdownItem adalah isi dari dropdownMenu
+*/
+.dropdownItem {
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.2s ease;
+}
+/* gaya untuk tautan di dalam dropdownItem */
+.dropdownItem a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.dropdownMenuSelect:focus { /* penjelasan: gaya saat elemen select dalam fokus */
-    border-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(255,255,255,0.35);
-    cursor: pointer;
+.dropdownItem a:hover {
+  background-color: #fff3e0;
+  color: #ff7b00;
+  padding-left: 25px;
 }
 
-.dropdownMenuContainer option { /* penjelasan: gaya untuk opsi dalam dropdown menu */
-    padding: 8px 12px;
-    font-size: 14px;
-    color: #333;
-    background-color: #fff;
-    cursor: pointer;
+.dropdownItem:first-child a {
+  border-radius: 10px 10px 0 0;
 }
 
-/* Optional: small arrow indicator for select */
-.dropdownMenuWrapper { /* penjelasan: membungkus select untuk menambahkan panah */
-    position: relative;
-    display: inline-flex;
-    align-items: center;
+.dropdownItem:last-child a {
+  border-radius: 0 0 10px 10px;
 }
 
-.dropdownMenuWrapper::after { /* penjelasan: menambahkan panah kecil di sebelah kanan dropdown */
-    content: "\25BE"; /* Down triangle */
-    position: absolute;
-    right: 12px;
-    color: #888;
-    pointer-events: none;
+/* penjelasan ::after menambahkan simbol panah ke bawah pada navItem
+*/
+.navItem::after {
+  content: '▼';
+  font-size: 10px;
+  margin-left: 8px;
+  display: inline-block; /* allow transform to apply reliably */
+  transition: transform 0.3s ease;
 }
-
-/* Responsive tweaks */
-@media (max-width: 480px) { /* penjelasan: gaya responsif untuk layar kecil */
-    .dropdownMenuContainer {
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 12px;
-    }
-    .dropdownMenuSelect {
-        width: 100%;
-    }
+/* penjelasan ::hover::after memutar simbol panah ke atas saat navItem disorot
+*/
+.navItem:hover::after {
+  transform: rotate(180deg);
 }
-

@@ -7,32 +7,40 @@ function DropdownMenu() {
 
 
   return (
-    <div className={styles.dropdownMenuContainer}>
-      <label htmlFor="genre">Pilih Genre Film:</label>
-      <div className={styles.dropdownMenuWrapper}>
-        <select id="genre" name="genre" className={styles.dropdownMenuSelect}>
-          <option value="action">Action</option>
-          <option value="comedy">Comedy</option>
-          <option value="horror">Horror</option>
-          <option value="romance">Romance</option>
-          <option value="fiction">Fiction</option>
-          <option value="adventure">Adventure</option>
-          <option value="thriller">Thriller</option>
-          <option value="animation">Animation</option>
-        </select>
-        
-        <label htmlFor="tahun">Pilih Tahun Film:</label>
-        <select id="tahun" name="tahun" className={styles.dropdownMenuSelect}>
-          <option value="2025">2025</option>
-          <option value="2024">2024</option>
-          <option value="2023">2023</option>
-          <option value="2022">2022</option>
-          <option value="2021">2021</option>
-          <option value="2020">2020</option>
-          <option value="2019">2019</option>
-        </select>
-      </div>
-    </div>
+    // buatlah dropdown menu jika di hover bagian genre maka akan muncul pilihan genre film seperti Action, Comedy, Horror, Romance, Fiction, Adventure, Thriller, Animation 
+    // saat di klik genre tsb akan mengarah ke halaman baru yang menampilkan daftar film berdasarkan genre yang dipilih
+    // buatlah dropdown menu jika di hover bagian movies maka akan muncul most popular, upcoming, top rated
+    // saat di klik akan mengarah ke halaman baru yang menampilkan daftar film berdasarkan pilihan tsb
+    <nav className={styles.navbar}>
+      <ul className={styles.navItems}>
+        <li className={styles.navItem}>
+          Genre
+          <ul className={styles.dropdownMenu}>
+            <li className={styles.dropdownItem}><a href="">Action</a></li>
+            <li className={styles.dropdownItem}><a href="">Comedy</a></li>
+            <li className={styles.dropdownItem}><a href="">Horror</a></li>
+            <li className={styles.dropdownItem}><a href="">Romance</a></li>
+            <li className={styles.dropdownItem}><a href="">Fiction</a></li>
+            <li className={styles.dropdownItem}><a href="">Adventure</a></li>  
+            <li className={styles.dropdownItem}><a href="">Thriller</a></li>
+            <li className={styles.dropdownItem}><a href="">Animation</a></li>
+          </ul>
+        </li>
+        <li className={styles.navItem}> 
+          Movies
+          <ul className={styles.dropdownMenu}>
+            <li className={styles.dropdownItem}><a href="">Most Popular</a></li>
+            <li className={styles.dropdownItem}><a href="">Upcoming</a></li>
+            <li className={styles.dropdownItem}><a href="">Top Rated</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+
+
+
   );
 }
 

@@ -29,7 +29,7 @@ const filmterbaru = [{id: 5, name: "Avatar: The Way of Water", year: 2022},
       <>
   
       <DropdownMenu />
-          {/**/}
+          {/*
       <UserGreeting isLoggedIn={false} name="Asep"/>
       <div className={styles.cardFilmContainer}>
         <CardFilm 
@@ -77,6 +77,7 @@ const filmterbaru = [{id: 5, name: "Avatar: The Way of Water", year: 2022},
 
       {films.length > 0 && <List bioskop={films} category="Film Terkenal"/>}
       {filmterbaru.length > 0 && <List bioskop={filmterbaru} category="Film terbaru"/>}
+      */}
       </>
     );
 }
