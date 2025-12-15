@@ -6,6 +6,29 @@
   border-radius: 12px;
   margin: 20px 10px;
 }
+.navTitle{
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto;
+  user-select: none;
+}
+.logonavbar {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  vertical-align: middle;
+  border-radius: 8px;
+  transform: rotate(-5deg);
+}
+.logonavbar:hover {
+  transform: scale(1.30) rotate(-30deg);
+  transition: transform 0.3s ease;
+
+  cursor: pointer;
+
+}
+
 /*
 .navItems adalah kotak yang menampung daftar ul navigasi
 */
