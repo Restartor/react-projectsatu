@@ -4,14 +4,14 @@ import styles from './dropdownMenu.module.css';
 
 const routeTitle = (path) => {
   if (path === "/") return "Home";
-  if (path.startsWith("/films/action")) return "Action";
-  if (path.startsWith("/films/comedy")) return "Comedy";
-  if (path.startsWith("/films/horror")) return "Horror";
-  if (path.startsWith("/films/romance")) return "Romance";
-  if (path.startsWith("/films/fiction")) return "Fiction";
-  if (path.startsWith("/films/adventure")) return "Adventure";
-  if (path.startsWith("/films/thriller")) return "Thriller";
-  if (path.startsWith("/films/animation")) return "Animation";
+  if (path.startsWith("/films/genre/action")) return "Action";
+  if (path.startsWith("/films/genre/comedy")) return "Comedy";
+  if (path.startsWith("/films/genre/horror")) return "Horror";
+  if (path.startsWith("/films/genre/romance")) return "Romance";
+  if (path.startsWith("/films/genre/fiction")) return "Fiction";
+  if (path.startsWith("/films/genre/adventure")) return "Adventure";
+  if (path.startsWith("/films/genre/thriller")) return "Thriller";
+  if (path.startsWith("/films/genre/animation")) return "Animation";
   return "Page";
 };
 
@@ -20,6 +20,10 @@ function DropdownMenu() {
 
 const location = useLocation();
 const title = routeTitle(location.pathname);
+
+const actionGenre = () => {
+  window.location.href = '/films/genre/action';
+}
 
   return (
     // buatlah dropdown menu jika di hover bagian genre maka akan muncul pilihan genre film seperti Action, Comedy, Horror, Romance, Fiction, Adventure, Thriller, Animation 

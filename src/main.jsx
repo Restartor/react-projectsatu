@@ -5,7 +5,7 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import React from 'react'
 import Error404 from './WebPage/ErrNotFound.jsx'
-import { useLocation } from 'react-router-dom';
+import GenrePage from './WebPage/genreFilms/GenrePage.jsx'
 
 
 // make a path for each genre film page if clicked then goes to the
@@ -13,10 +13,21 @@ import { useLocation } from 'react-router-dom';
 // 
 
 const router = createBrowserRouter([
-  {path: "/", element: <App />},
-  {path: "/films/genre/:genre",},
-  {path: "/films/movies/:movies",},
-  {path: "*", element: <Error404 />}
+  {
+    path: "/", element: <App />
+  },
+  {
+    path: "/films/genre/:genre",
+    element: <GenrePage />
+  },
+  {
+    path: "/films/movies/:movies",
+    element: <Error404 />
+  },
+  {
+    path: "*", 
+    element: <Error404 />
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(
