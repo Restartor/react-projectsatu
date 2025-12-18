@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     path: "/", element: <App />
   },
   {
-    path: "/films/genre/:genre",
+    path: "/films/category/:genre",
     element: <GenrePage />
   },
   {

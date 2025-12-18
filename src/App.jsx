@@ -4,6 +4,7 @@ import styles from './ASSET NEGARA/App.module.css';
 import DropdownMenu from './Navigation Bar(iseng)/dropdownMenu.jsx';
 import UserGreeting from './4.Conditional Rendering/UserGreeting.jsx';
 import List from './5.Rendering List/List.jsx';
+import FooterWeb from './FooterNIH/FooterWeb.jsx';
 
 function App() {
 // berikan link film pada setiap objek di array films
@@ -80,12 +81,17 @@ const filmterbaru = [{id: 5, name: "Avatar: The Way of Water", year: 2022},
         videoLink="https://www.youtube.com/watch?v=JfVOs4VSpmA"
         genre={["Action ", "Adventure ", "Sci-Fi "]}
         />
+      </div>
+
+      {/*}
         <span>      
           {films.length > 0 && <List bioskop={films} category="Film Terkenal"/>}
            {filmterbaru.length > 0 && <List bioskop={filmterbaru} category="Film terbaru"/>}
-        </span>
-      </div>
+        </span> */}
 
+        <div>
+          <FooterWeb />
+        </div>
 
       </>
     );

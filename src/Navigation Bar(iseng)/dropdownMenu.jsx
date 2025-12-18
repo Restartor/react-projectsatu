@@ -5,14 +5,14 @@ import webicon from '../ASSET NEGARA/webicon.png'
 
 const routeTitle = (path) => {
   if (path === "/") return "Home";
-  if (path.startsWith("/films/genre/action")) return "Action";
-  if (path.startsWith("/films/genre/comedy")) return "Comedy";
-  if (path.startsWith("/films/genre/horror")) return "Horror";
-  if (path.startsWith("/films/genre/romance")) return "Romance";
-  if (path.startsWith("/films/genre/fiction")) return "Fiction";
-  if (path.startsWith("/films/genre/adventure")) return "Adventure";
-  if (path.startsWith("/films/genre/thriller")) return "Thriller";
-  if (path.startsWith("/films/genre/animation")) return "Animation";
+  if (path.startsWith("/films/category/action")) return "Action";
+  if (path.startsWith("/films/category/comedy")) return "Comedy";
+  if (path.startsWith("/films/category/horror")) return "Horror";
+  if (path.startsWith("/films/category/romance")) return "Romance";
+  if (path.startsWith("/films/category/fiction")) return "Fiction";
+  if (path.startsWith("/films/category/adventure")) return "Adventure";
+  if (path.startsWith("/films/category/thriller")) return "Thriller";
+  if (path.startsWith("/films/category/animation")) return "Animation";
   if (path.startsWith("/films/movies/most-watched")) return "Most Watched";
   if (path.startsWith("/films/movies/top-rated")) return "Top Rated Movies";
   if (path.startsWith("/films/movies/trending")) return "Trending Movies";
@@ -40,14 +40,14 @@ const title = routeTitle(location.pathname);
         <li className={styles.navItem}>
           Genre
           <ul className={styles.dropdownMenu}>
-            <li className={styles.dropdownItem}><Link to="/films/genre/action">Action</Link></li>
-            <li className={styles.dropdownItem}><Link to="/films/genre/comedy">Comedy</Link></li>
-            <li className={styles.dropdownItem}><Link to="/films/genre/horror">Horror</Link></li>
-            <li className={styles.dropdownItem}><Link to="/films/genre/romance">Romance</Link></li>
-            <li className={styles.dropdownItem}><Link to="/films/genre/fiction">Fiction</Link></li>
-            <li className={styles.dropdownItem}><Link to="/films/genre/adventure">Adventure</Link></li>  
-            <li className={styles.dropdownItem}><Link to="/films/genre/thriller">Thriller</Link></li>
-            <li className={styles.dropdownItem}><Link to="/films/genre/animation">Animation</Link></li>
+            <li className={styles.dropdownItem}><Link to="/films/category/action">Action</Link></li>
+            <li className={styles.dropdownItem}><Link to="/films/category/comedy">Comedy</Link></li>
+            <li className={styles.dropdownItem}><Link to="/films/category/horror">Horror</Link></li>
+            <li className={styles.dropdownItem}><Link to="/films/category/romance">Romance</Link></li>
+            <li className={styles.dropdownItem}><Link to="/films/category/fiction">Fiction</Link></li>
+            <li className={styles.dropdownItem}><Link to="/films/category/adventure">Adventure</Link></li>  
+            <li className={styles.dropdownItem}><Link to="/films/category/thriller">Thriller</Link></li>
+            <li className={styles.dropdownItem}><Link to="/films/category/animation">Animation</Link></li>
           </ul>
         </li>
         <li className={styles.navItem}> 

@@ -1,0 +1,200 @@
+/* Footer Container */
+.footerContainer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #e0e0e0;
+  padding: 50px 30px 30px;
+  margin-top: 80px;
+  border-top: 3px solid #e58209;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Layout Wrapper untuk Logo + Navigation */
+.bagianKiriFooterLogo,
+.navigasikategorifooter {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Bagian Kiri - Logo & Deskripsi */
+.bagianKiriFooterLogo {
+  max-width: 350px;
+  margin-bottom: 40px;
+  margin-right: 60px;
+}
+
+.bagianKiriFooterLogo img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  filter: brightness(1.1);
+  transition: transform 0.3s ease;
+}
+
+.bagianKiriFooterLogo img:hover {
+  transform: scale(1.05);
+}
+
+.bagianKiriFooterLogo p {
+  color: #b0b0b0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Navigation - Original Series & Category */
+.navigasikategorifooter {
+  display: inline-flex;
+  gap: 80px;
+  margin-bottom: 40px;
+  flex-wrap: nowrap;
+  vertical-align: top;
+}
+
+.IbuKategory {
+  min-width: 150px;
+}
+
+.IbuKategory h3 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e59f09;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.IbuKategory ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.IbuKategory li {
+  margin-bottom: 10px;
+}
+
+.IbuKategory a {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.IbuKategory a:hover {
+  color: #e50914;
+  padding-left: 5px;
+}
+
+/* Divider Line */
+.pemotong {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e50914, transparent);
+  margin: 30px 0;
+}
+
+/* Bottom Section - Copyright & Social Media */
+.barisfooter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.barisfooter > p {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Social Media Links */
+.sosialmediafooter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.sosialmediafooter li {
+  margin: 0;
+}
+
+.sosialmediafooter a {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.sosialmediafooter a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #e50914;
+  transition: width 0.3s ease;
+}
+
+.sosialmediafooter a:hover {
+  color: #e50914;
+}
+
+.sosialmediafooter a:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footerContainer {
+    padding: 30px 20px;
+  }
+
+  .bagianKiriFooterLogo,
+  .navigasikategorifooter {
+    display: block;
+    margin-right: 0;
+  }
+
+  .navigasikategorifooter {
+    gap: 40px;
+  }
+
+  .bagianKiriFooterLogo {
+    max-width: 100%;
+  }
+
+  .sosialmediafooter ul {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerContainer {
+    padding: 25px 15px;
+  }
+
+  .navigasikategorifooter {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .IbuKategory h3 {
+    font-size: 14px;
+  }
+
+  .sosialmediafooter ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
