@@ -53,3 +53,5 @@ Dan agar saya bisa mengerti konsep dasar React + Vite serta bisa membuat project
 * Membuat Click events sederhana pada Card Film . timestamp 12/13/2025 (pada folder 6.Click Events)
 
 * mempelajari click events lebih dalam dengan menjadikan list film menjadi clickable list yang mengarah ke link nonton film . timestamp 12/14/2025 (pada folder 5.Rendering Lists)
+
+* UDAH LUPA PROSES BELAJARNYA APA AJA SOALNYA UDAH MALAS CATET NIH  :v  . timestamp 12/15/2025 - 12/25/2025 (Membuat Video Web Page Yang Bisa Memutar Video Sesuai Film yang di Klik pada Card Film di Home Page) & (Membuat Fetch API Golang Data dari film berdasarkan id) (pada folder WebPage dan data) --PAKE GOLANG BACKENDNYA--

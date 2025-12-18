@@ -1,0 +1,36 @@
+.webcontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.videoFilm {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.videoFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}   
+a {
+    cursor: pointer;
+}
+Link {
+    cursor: pointer;
+}
