@@ -1,11 +1,10 @@
-import Card from './../1.Card Components/Card.jsx';
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './cardFilm.module.css';
-import { useNavigate } from 'react-router-dom';
+import Card from "./../1.Card Components/Card.jsx";
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./cardFilm.module.css";
+import { useNavigate } from "react-router-dom";
 
 function CardFilm({ id, gambar, judul, tahun, deskripsi, genre }) {
-
   const navigate = useNavigate();
 
   const openVideo = () => {
@@ -17,8 +16,6 @@ function CardFilm({ id, gambar, judul, tahun, deskripsi, genre }) {
       <img src={gambar} alt={judul} />
       <h2>{judul}</h2>
       <p className={styles.tahun}>{tahun}</p>
-      <p>{deskripsi}</p>
-
       <div className={styles.genre}>
         {genre.map((g, i) => (
           <span key={i}>{g}</span>
@@ -27,6 +24,5 @@ function CardFilm({ id, gambar, judul, tahun, deskripsi, genre }) {
     </div>
   );
 }
-
 
 export default CardFilm;

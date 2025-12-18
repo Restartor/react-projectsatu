@@ -5,7 +5,7 @@
   padding: 50px 30px 30px;
   margin-top: 80px;
   border-top: 3px solid #e58209;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Layout Wrapper untuk Logo + Navigation */
@@ -28,10 +28,6 @@
   margin-bottom: 15px;
   filter: brightness(1.1);
   transition: transform 0.3s ease;
-}
-
-.bagianKiriFooterLogo img:hover {
-  transform: scale(1.05);
 }
 
 .bagianKiriFooterLogo p {
@@ -84,15 +80,16 @@
 }
 
 .IbuKategory a:hover {
-  color: #e50914;
+  color: #e59409;
   padding-left: 5px;
+  cursor: pointer;
 }
 
 /* Divider Line */
 .pemotong {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #e50914, transparent);
+  background: linear-gradient(90deg, transparent, #e59409, transparent);
   margin: 30px 0;
 }
 
@@ -135,18 +132,18 @@
 }
 
 .sosialmediafooter a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: #e50914;
+  background-color: #e59409;
   transition: width 0.3s ease;
 }
 
 .sosialmediafooter a:hover {
-  color: #e50914;
+  color: #e59409;
 }
 
 .sosialmediafooter a:hover::after {

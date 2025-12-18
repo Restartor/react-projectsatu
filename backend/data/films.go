@@ -17,7 +17,7 @@ var Films = []Film{
 		ID:        "tulsa-king",
 		Judul:     "Tulsa King",
 		Tahun:     "2025",
-		Deskripsi: "Tulsa king menceritakan tentang mantan komando mafia yang pensiun dan membuat kerajaan mafia baru",
+		Deskripsi: "Tulsa King adalah serial drama kriminal di Paramount+ yang dibintangi Sylvester Stallone sebagai Dwight 'The General' Manfredi, seorang capo mafia New York yang baru bebas setelah 25 tahun penjara dan diasingkan ke Tulsa, Oklahoma untuk membangun kerajaan kriminal baru, menghadapi tantangan membangun keluarga baru, konflik dengan mafia lokal, hingga menjalin hubungan rumit dengan putri kandungnya, menampilkan perpaduan humor gelap, aksi mafia klasik, dan latar lokasi yang tidak biasa",
 		Gambar:    "https://image.tmdb.org/t/p/original/hD4UoR4ZUXYBoKhKRwrJiTFLqCo.jpg",
 		VideoLink: "https://www.youtube.com/embed/aaQSScwZPbA",
 		Genre:     []string{"Action", "Crime", "Drama"},

@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .cardFilm{
@@ -17,7 +18,7 @@
     overflow: hidden;
     font-family: Arial, sans-serif;
 
-    background-color: #ff7b00;
+    background-color: #040404;
     color: #333;
     -user-select: none;
     cursor: pointer;

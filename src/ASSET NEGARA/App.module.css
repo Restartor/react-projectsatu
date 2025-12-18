@@ -17,3 +17,9 @@
   padding: 50px 20px;
   min-height: calc(100vh - 80px);
 }
+
+.cardFilmContainer{
+    margin: 100px;
+    background-color: hsla(30, 2%, 26%, 0.226);
+    border-radius: 25px;
+}
