@@ -10,6 +10,8 @@ function VideoWebPage() {
   // state untuk menyimpan data film
   const [film, setFilm] = useState(null);
 
+  const apiUrl = `http://localhost:8080/api/films/${id}`;
+
   // anti inspect element dan debugger
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,7 +28,7 @@ function VideoWebPage() {
 
   // fetch film data dari backend database golang berdasarkan id
   useEffect(() => {
-    fetch(`http://localhost:8080/api/films/${id}`)
+    fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => setFilm(data));
   }, [id]);

@@ -32,55 +32,12 @@ const filmterbaru = [{id: 5, name: "Avatar: The Way of Water", year: 2022},
       <div className={styles.WelcomeWoy}>Happy Watching!!😎</div>
 
       <div className={styles.cardFilmContainer}>
-        <CardFilm 
-          id="tulsa-king"
-          judul="Tulsa King"
-          gambar="https://image.tmdb.org/t/p/original/hD4UoR4ZUXYBoKhKRwrJiTFLqCo.jpg"
-          tahun="2025"
-          deskripsi="Tulsa king menceritakan tentang mantan komando mafia yang pensiun dan membuat kerajaan mafia baru"
-          genre={["Action ", "Crime ", "Drama "]}
-        />
-        <CardFilm
-          id="john-wick-4"
-          judul="John Wick 4"
-          tahun="2023"
-          deskripsi="John Wick kembali beraksi melawan musuh-musuh lamanya dalam pertempuran epik yang menegangkan."
-          gambar="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg"
-          genre={["Action ", "Thriller "]}
-
-        />
-        <CardFilm 
-          id="black-panther-wakanda-forever"
-          judul="Black Panther: Wakanda Forever"
-          tahun="2022"
-          deskripsi="Setelah kematian Raja T'Challa, Wakanda menghadapi ancaman baru dari musuh-musuh lama dan baru."
-          gambar="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sv1xJUazXeYqALzczSZ3O6nkH75.jpg"
-          genre={["Action ", "Adventure "]}
-        />
-        <CardFilm
-          id="avengers-endgame"
-          judul="Avengers: Endgame"
-          tahun="2019"
-          deskripsi="Para pahlawan super bersatu untuk mengalahkan Thanos dan mengembalikan keseimbangan alam semesta."
-          gambar="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/or06FN3Dka5tukK1e9sl16pB3iy.jpg"
-          genre={["Action ", "Adventure ", "Sci-Fi "]}
-        />
-        <CardFilm
-        id="doctor-strange-multiverse"
-        judul="Doctor Strange in the Multiverse of Madness"
-        tahun="2022"
-        deskripsi="Doctor Strange menjelajahi multiverse yang berbahaya untuk melindungi realitas dari ancaman baru."
-        gambar="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg"
-        genre={["Action ", "Adventure ", "Fantasy "]}
-        />
-        <CardFilm 
-        id="spiderman-no-way-home"
-        judul="Spiderman: No Way Home"
-        tahun="2021"
-        deskripsi="Peter Parker menghadapi konsekuensi dari identitasnya yang terungkap dan berhadapan dengan musuh-musuh dari dimensi lain."
-        gambar="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
-        genre={["Action ", "Adventure ", "Sci-Fi "]}
-        />
+        <CardFilm id="tulsa-king"/>
+        <CardFilm id="john-wick-4"/>
+        <CardFilm id="black-panther-wakanda-forever"/>
+        <CardFilm id="avengers-endgame"/>
+        <CardFilm id="doctor-strange-multiverse"/>
+        <CardFilm id="spiderman-no-way-home"/>
       </div>
 
       

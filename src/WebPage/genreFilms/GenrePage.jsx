@@ -26,7 +26,7 @@ const genreComponents ={
 
 function GenrePage() {
     const { genre } = useParams();
-    const key = typeof genre === 'string' ? genre.toLowerCase() : '';
+    const key = genre ? genre.toLowerCase() : '';
     const GenreComponent = genreComponents[key] || null;
 
     return GenreComponent ? <GenreComponent /> : <Error404 />;

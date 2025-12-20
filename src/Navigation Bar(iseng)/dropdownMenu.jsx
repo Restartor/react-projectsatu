@@ -18,7 +18,7 @@ const routeTitle = (path) => {
   if (path.startsWith("/films/movies/trending")) return "Trending Movies";
 
 
-  return "Page";
+  return "Home";
 };
 
 

@@ -8,11 +8,13 @@ import (
 	"backend/data"
 )
 
+// fungsi tersebut menjelaskan untuk mendapatkan semua data film dari data/films.go
 func dapatkanSemuaFilms(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(data.Films)
 }
 
+// fungsi tersebut menjelaskan mendapatkan data film berdasarkan ID dari URL path
 func dapatkanFilmDariID(w http.ResponseWriter, r *http.Request) {
 
 	id := strings.TrimPrefix(r.URL.Path, "/api/films/")
@@ -23,7 +25,7 @@ func dapatkanFilmDariID(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
-
+	// jika film tidak ditemukan, kembalikan respons 404
 	w.WriteHeader(http.StatusNotFound)
 	json.NewEncoder(w).Encode(map[string]string{
 		"error": "ERROR FILM NOT FOUND",
@@ -31,6 +33,8 @@ func dapatkanFilmDariID(w http.ResponseWriter, r *http.Request) {
 
 }
 
+// fungsi untuk mengaktifkan CORS,
+// CORS adalah mekanisme keamanan yang memungkinkan sumber daya di web untuk diakses dari domain yang berbeda
 func enableCORS(h http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 
@@ -51,7 +55,9 @@ func enableCORS(h http.Handler) http.Handler {
 
 func main() {
 	mux := http.NewServeMux()
+	// mux adalah multiplexer HTTP yang mengarahkan permintaan ke handler yang sesuai berdasarkan pola URL
 
+	// panggil fungsi dengan mux HandleFunc untuk mengatur routing API
 	mux.HandleFunc("/api/films", dapatkanSemuaFilms)
 	mux.HandleFunc("/api/films/", dapatkanFilmDariID)
 
