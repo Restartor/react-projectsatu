@@ -79,12 +79,6 @@ Frontend default Vite berjalan di `http://localhost:5173`; backend API di `http:
 
 - 2025-12-23: Menambahkan dan merinci bagian **"Course yang dipelajari"**, menambahkan ringkasan struktur proyek, penjelasan per-topik yang dipelajari beserta keterkaitannya dengan file/folder proyek, serta menambahkan instruksi singkat menjalankan backend dan frontend.
 
-Jika Anda ingin, saya bisa:
-
-- menambahkan screenshot atau contoh output,
-- membuat daftar file lengkap dengan link ke file tertentu,
-- atau menambahkan langkah pengujian otomatis.
-
 ---
 
 _File ini diperbarui otomatis pada 2025-12-23 oleh COPILOT asisten._
