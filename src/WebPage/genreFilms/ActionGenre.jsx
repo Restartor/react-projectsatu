@@ -1,7 +1,7 @@
 import DropdownMenu from "../../Navigation Bar(iseng)/dropdownMenu";
 import styles from './Genre.module.css';
 import React from 'react';
-import Dropdown from "../../Navigation Bar(iseng)/dropdownMenu";
+
 function ActionGenre() {
 
 

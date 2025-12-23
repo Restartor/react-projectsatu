@@ -1,8 +1,11 @@
+
+
 .cardFilmContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .cardFilm{
@@ -15,9 +18,10 @@
     overflow: hidden;
     font-family: Arial, sans-serif;
 
-    background-color: #ff7b00;
+    background-color: #040404;
     color: #333;
     -user-select: none;
+    cursor: pointer;
 }
 .cardFilm img {
     width: 100%;
@@ -50,6 +54,7 @@
     color: rgba(255, 255, 255, 0.774);
     font-style: normal;
     margin-top: 5px;
+    text-align: center;
 }
 
 .cardFilm:hover {
@@ -57,3 +62,4 @@
     transition: transform 0.2s ease;
     cursor: pointer;
 }
+

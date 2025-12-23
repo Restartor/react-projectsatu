@@ -1,52 +1,39 @@
-import Card from './../1.Card Components/Card.jsx';
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './cardFilm.module.css';
+import React, { useEffect, useState } from "react";
+import styles from "./cardFilm.module.css";
+import { useNavigate } from "react-router-dom";
 
-function CardFilm(props){
- 
-const videoFilm = props.videoLink ?? "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+function CardFilm({ id }) {
+  const navigate = useNavigate();
+  const [film, setFilm] = useState();
+  const [loading, setLoading] = useState(true);
 
-const genreFilm = props.genre ?? "Genre Film";
+  const openVideo = () => {
+    navigate(`/movie/${id}`);
+  };
+  const apiUrl = `http://localhost:8080/api/films/${id}`;
 
-const openVideo = () => {
-    window.open(videoFilm, "_blank");
+useEffect(() => {
+  fetch(apiUrl)
+    .then(res => res.json())
+    .then (data => {setFilm(data); setLoading(false);})
+  },[id]);
+
+if (loading) {
+  return <div className={styles.cardFilm}>Loading...</div>;
+} 
+
+  return (
+    <div className={styles.cardFilm} onClick={openVideo}>
+      <img src={film.gambar} alt={film.judul} />
+      <h2>{film.judul}</h2>
+      <p className={styles.tahun}>{film.tahun}</p>
+      <div className={styles.genre}>
+        {film.genre?.map((g, i) => (
+          <span key={i}>{ g }</span>
+        ))}
+      </div>
+    </div>
+  );
 }
-
-const filmClicked = () => {
-    alert(`Kamu memilih film: ${props.judul}`);
-    openVideo();
-}
-
-
-    return(        
-    <div className={styles.cardFilm} onClick={filmClicked}>
-        <img src={props.gambar} alt="Poster Film" />
-            <h2>{props.judul}</h2>
-            <p className={styles.tahun}>{props.tahun}</p>
-            <p>{props.deskripsi}</p>
-            <p className={styles.genre}>{genreFilm}</p>
-        </div>
-    );
-}
-
-CardFilm.propTypes = {
-    gambar: PropTypes.string.isRequired,
-    judul: PropTypes.string.isRequired,
-    tahun: PropTypes.string.isRequired,
-    deskripsi: PropTypes.string.isRequired,
-    videoLink: PropTypes.string,
-    // buatlah genre sebagai array of string agar bisa menampung lebih dari satu genre dan bisa di filter berdasarkan genre serta tampil di card film
-    genre: PropTypes.arrayOf(PropTypes.string),
-}
-CardFilm.defaultProps = {
-    gambar: "https://www.shutterstock.com/image-photo/big-screen-rows-red-seats-600nw-2513489879.jpg",
-    judul: "Judul Film",
-    tahun: "Tahun Rilis",
-    deskripsi: "Deskripsi singkat tentang film ini.",
-    videoLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    genre:["Genre Film"],
-}
-
 
 export default CardFilm;

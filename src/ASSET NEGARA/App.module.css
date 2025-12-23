@@ -1,0 +1,25 @@
+
+.WelcomeWoy{
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cardFilmContainer{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 50px 20px;
+  min-height: calc(100vh - 80px);
+}
+
+.cardFilmContainer{
+    margin: 100px;
+    background-color: hsla(30, 2%, 26%, 0.226);
+    border-radius: 25px;
+}
